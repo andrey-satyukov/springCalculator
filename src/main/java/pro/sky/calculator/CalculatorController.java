@@ -66,6 +66,8 @@ public class CalculatorController {
             return "Введите первое число";
         } else if (num2 == null) {
             return "Введите второе число";
+        } else if (num2 == 0) {
+            return "На ноль делить нельзя";
         } else {
             return Double.toString(num1) + " / " + Double.toString(num2) + " = " + calculatorService.divide(num1, num2);
         }
